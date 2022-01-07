@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML FORMS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <header style="font-size: 25pt;
+    color: antiquewhite;background-color: rgb(35, 92, 94);
+    text-align: left; position: relative;">HTML FORMS</br></header>
+    <div id="logger"></div>
+</head>
+      
+<script>
+    var logg = document.getElementById("logger");
+    clientSideFormProcessor = () => {
+        let formHandle = document.forms["userProfileForm"];
+        //console.log(`blah`);
+        
+        logg.innerHTML = `LOGGER : ${formHandle.firstName.value} and password is
+        ${formHandle.password.value}`;
+        // password validation example
+        if (formHandle.password.value.length < 8) {
+           // formHandle.password.style = "background-color:red";
+           $("password").css("background-color","blue"); 
+
+        }  
+          // radio button example
+          logg.innerHTML=logg.innerHTML+`<br> your music choice  is
+           ${formHandle.music.value}`;
+    
+           let music12="";
+           for(let i=0;i<formHandle.music1.length;i++){
+            if(formHandle.music1[i].checked){
+              //  alert("no of check boxed ticked"+formHandle.music1[i].value);
+              music12=music12+","+formHandle.music1[i].value;
+            }
+           }
+           logg.innerHTML=logg.innerHTML+`<br> ticked is ${music12}`;
+           // for fruits
+           let fruits1="";
+           for(let i=0;i<formHandle.fruits.length;i++){
+            if(formHandle.fruits[i].selected){
+               // formHandle.fruits[i].style="background-color:blue";
+                //  alert("no of check boxed ticked"+formHandle.music1[i].value);
+              fruits1=fruits1+","+formHandle.fruits[i].value;
+            }
+           };
+           
+           fruits1=fruits1.substring(1);
+           logg.innerHTML=logg.innerHTML+`<br> ticked is ${fruits1}`;
+        
+          
+           // if form submtted tobackene
+        /* if(formIsGood==true){
+            alert("form is good na d submitted to backend");
+            formHandle.submit();
+        }else{
+            alert("form is bad an d noty submitted to backend");
+        }*/
+      
+    }
+
+</script>
+
+<body>
+    <form name="userProfileForm" action="form-processor.js" method="post">
+        First Name:<input type="text" name="firstName"></br>
+        Password:<input type="password" name="password">
+
+        <br /><br />
+        Select your favourite music type<br />
+        <input type="radio" name="music" value="meditation" >Meditatiom<br>
+        <input type="radio" name="music" value="classic" >Classic<br>
+        <input type="radio" name="music" value="western" >western<br>
+    
+          Select your favourite music type<br />
+        <input type="checkbox" name="music1" value="meditation" >Meditatiom<br />
+        <input type="checkbox" name="music1" value="classic" >Classic<br />
+        <input type="checkbox" name="music1" value="western" >western<br />
+        select your favourite fruits<br>
+        
+        <select name="fruits" multiple>
+            <option value="apple" >Apple</option>
+            <option value="Banana" >Banana</option>
+            <option value="Mango" >Mango</option>
+
+        </select>
+ 
+        <input type="submit" onclick="clientSideFormProcessor(); return false">
+
+    </form>
+
+</body>
+
+</html>
