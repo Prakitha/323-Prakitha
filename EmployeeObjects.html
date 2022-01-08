@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OBJECT DESTRUTURING</title>
+</head>
+
+<body>
+    <header style="font-size: 25pt;
+        color: antiquewhite;background-color: rgb(149, 194, 196);
+        text-align: center;">EMPLOYEE DYNAMIC ARRAY</header>
+
+</body>
+<script src="Employee.js"></script>
+<script>
+      f= ({ employeeId,employeeName,employeeAge,employeeSalary,employeeGender }) => document.write(`<hr>
+      Id  of employee : ${employeeId} <br/>Name of employee : ${employeeName}<br/> 
+      Age of employee : ${employeeAge} <br/> Gender of employee : ${employeeGender}<br/>Salary of employee : ${employeeSalary}`);
+var arr=[emp1,emp2,emp3,emp4];
+ var allProducts="";
+ for(var i=0;i<arr.length;i++){
+     allProducts=allProducts+ `<p> ${f(arr[i])}</p>` ;
+ }
+ f1(emp1);
+ f2(emp2);
+ f3(emp3);
+ f4(emp4);
+
+</script>
+</html>
