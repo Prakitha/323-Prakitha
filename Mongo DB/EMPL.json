@@ -1,0 +1,89 @@
+[{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a84"
+  },
+  "no": 1,
+  "name": "ST",
+  "salary": 6000,
+  "role": "OB"
+},{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a85"
+  },
+  "no": 2,
+  "name": "MSD",
+  "salary": 5500,
+  "role": "wk"
+},{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a86"
+  },
+  "no": 3,
+  "name": "YS",
+  "salary": 5000,
+  "role": "ALR"
+},{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a87"
+  },
+  "no": 4,
+  "name": "RD",
+  "salary": 10000,
+  "role": "MOB"
+},{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a88"
+  },
+  "no": 5,
+  "name": "RS",
+  "salary": 4500,
+  "role": "OB"
+},{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a89"
+  },
+  "no": 6,
+  "name": "BK",
+  "salary": 4500,
+  "role": "MOB"
+},{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a8a"
+  },
+  "no": 7,
+  "name": "VK",
+  "salary": 4300,
+  "role": "BW"
+},{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a8b"
+  },
+  "no": 8,
+  "name": "JB",
+  "salary": 4400,
+  "role": "BW"
+},{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a8c"
+  },
+  "no": 9,
+  "name": "HP",
+  "salary": 4400,
+  "role": "ALR"
+},{
+  "_id": {
+    "$oid": "61d6d5c9a77d3572714b4a8d"
+  },
+  "no": 10,
+  "name": "VS",
+  "salary": 4300,
+  "role": "OB"
+},{
+  "_id": {
+    "$oid": "61d6df3ea77d3572714b4a90"
+  },
+  "no": 11,
+  "name": "AK",
+  "role": "coch",
+  "salary": 10000
+}]
