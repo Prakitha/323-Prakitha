@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<HTML>
+    <script>
+        function discount(price,percentage){
+           document.write("the discount percentage=10%");
+            return (price*percentage)/100;
+        }
+        function offer(price){
+             document.write("the discount price");
+            return price/2;
+        }
+        function finalPrice(price,percentage,f,g){
+         var k=   f(price);// g is the offer funtion.
+         var o =g(k,percentage);// invoking; o is the discount on the offer price.
+        return o;
+        }
+     var f= finalPrice(50, 20, offer, discount);
+     document.write("<br>final price of 50 and 20");
+
+     document.write(f);
+    </script>
+</HTML>
