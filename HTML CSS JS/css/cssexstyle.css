@@ -1,0 +1,6 @@
+
+p{text-decoration:   underline;color: rgb(123, 172, 112);}
+a{text-decoration: underline;color: rgb(219, 141, 141)}
+.myclass{text-decoration: none;color: rgb(240, 172, 214);text-align: center;
+    background:url(https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80) no-repeat greenyellow;}
+ .myclass2{text-decoration: underline;}
