@@ -1,0 +1,12 @@
+Chain of hotel
+entity                              
+
+Customer                      
+Room        
+Payment                                          
+Request                
+
+                        
+operation:
+login
+booking
