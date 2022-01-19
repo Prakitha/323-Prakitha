@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ARROW</title>
+</head>
+<script>
+    function f1() {
+        document.write(`<hr> Inside f1 <br/>`);
+    }
+    f1();
+    // same function using arrow notations
+
+    f2 = () => document.write(`<hr> inside f2<br/>`);
+    f2();
+    // some arrow function which takes parameter
+    f3 = (a) => document.write(`<hr> inside f3 is ${a}<br>`);
+    f3(10);
+
+    // some arrow function which takes 2 parameter
+    f4 = (a, b) => document.write(`<hr> inside f3 is ${a} and b is ${b}<br>`);
+    f4(1, "prakitha");
+    // some arrow function which takes returns a value or parameter
+    f5 = (a, b) => a + b;
+    var val1 = f5(150, 20);// no need to tell return
+    document.write(`<hr> return a+b is ${val1}<br>`);
+
+    // some arrow function which takes returns two mul anmd add value or parameter
+    f6 = (a, b) => {
+        var c = a + b;
+        var d = 2 * c;
+        return c;
+    }
+    var val2 = f6(10, 20);// need to tell return
+    document.write(`<hr> return a+b  return is ${val2}<br>`);
+
+    f7 = ({ price,color }) => document.write(`<hr> F7 car price is${price}
+    and colr is${color} `);
+    var car1 = {
+        price: 1000,
+        color: "red",
+        weight: 100
+    }
+    f7(car1);
+
+    f8=(a,b,f) =>f(a,b);
+   var val3= f8(10,15,f5);
+    document.write(`<hr> F8 is ${val3}<br>`);
+
+</script>
+

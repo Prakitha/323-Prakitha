@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible " content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<script>
+    //var logger = document.getElementById(logger)
+  /* function average(a, b, c) {
+        return (a + b + c) / 3;
+    }
+    
+    //  logger.innerHTML=(average(10, 20, 30));
+    var arr1 = [10, 20, 30];
+    var arr1Avg = average(arr1[0], arr1[1], arr1[2]);
+    document.write(`<br> average of arr1 is ${arr1Avg}`)
+    // spread operator
+    var arr2 = [15, 50, 25]
+    var arr2Avg1 = average(...arr2);
+    document.write(`<br> average of arravg1 is ${arr2Avg1} `);
+    var arr3 = [40, 50, 60, 70];
+    var arr3Avg3 = average(...arr3);
+    document.write(`<br> average of arr3avg3 is ${arr3Avg3} `);
+    */
+    // coding adding 
+    var arr5=[10,15,20,25];
+    var arr6=[15,20,15];
+    var arr4 = [];
+    var i=0;
+    for(i=0;i<=arr5.length;i++){
+       arr4[i]=arr5[i];
+    }
+   var j=0;
+   for(j=0;j<=arr6.length;i++){
+       arr4[i++]=arr6[j];
+   }
+   document.write(`<hr><br/>array elements ${arr4}`);
+   document.write(`<hr><br/> array concat ${arr5.concat(arr6)}`);
+   
+</script>
+
+<body>
+    <header style="font-size: 25pt;
+        color: antiquewhite;background-color: cadetblue;content: center;">SPREAD OPERATOR</header>
+
+    <div id="logger">log statements here</div>
+</body>
+
+</html>

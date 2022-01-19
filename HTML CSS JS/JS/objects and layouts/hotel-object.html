@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <script>
+  class hotel{
+      constructor(name,noofguest,price,Id,withAC,swiimmingPoolAttached,suitRoom){
+          this.name=name;
+          this.noofguest=noofguest;
+          this.price=price;
+          this.Id=Id;
+          this.withAC=withAC;
+              this.swiimmingPoolAttached=swiimmingPoolAttached;
+              this.suitRoom=suitRoom;
+      }
+      display = function () {
+            document.write("<br/> objects price = " + this.name);
+            document.write("<br/> objects color = " + this.noofguest);
+            if (price){
+                price<=5000;
+            }
+            document.write("<br/> objects price = " + this.price);
+            document.write("<br/> objects color = " + this.Id);
+
+            document.write("<br/> objects price = " + this.withAC);
+            document.write("<br/> objects color = " + this.swiimmingPoolAttached);
+            document.write("<br/> objects price = " + this.suitRoom);
+        }
+     }; 
+     var cus1=new hotel("prakitha",4,4000,"bsgbs","yes","yes","yes")
+     var cus2=new hotel("samrudh",2,5000,"bggbs","yes","no","yes")
+     var cus3=new hotel("prakithjfn",8,4500,"bsgbs","yes","yes","no")
+     var cus4=new hotel("prakithahg",5,5200,"bsgbs","no","yes","yes")
+
+     cus1.display();
+     cus2.display();
+     cus3.display();
+     cus4.display();
+    </script>
+</html>

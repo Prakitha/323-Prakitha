@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    div{
+        background: #659494;
+        border: 5px solid rgb(173, 221, 230);
+        margin: 5px;
+        padding: 5px;
+    }
+    .section_flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div{
+        
+        overflow: initial;
+     
+        flex-basis: 10%;
+    }
+ 
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>OBJECT DESTRUTURING</title>
+</head>
+
+<body>
+    <header style="font-size: 25pt;
+        color: antiquewhite;background-color: rgb(149, 194, 196);
+        text-align: center;">EMPLOYEE DYNAMIC ARRAY</header>
+
+</body>
+<section class="section_flex"></section>
+
+<script src="Employee.js"></script>
+<script>
+       /*f1= ({ employeeId,employeeName,employeeAge,employeeSalary,employeeGender }) => 
+    document.write(` Id  of employee : ${employeeId} <br/>Name of employee : ${employeeName}<br/> Age of employee : ${employeeAge} <br/> Gender of employee : ${employeeGender}<br/>Salary 
+    of employee : ${employeeSalary}`)
+    f2= ({ employeeId,employeeName,employeeAge,employeeSalary,employeeGender }) => 
+    document.write(` Id  of employee : ${employeeId} <br/>Name of employee : ${employeeName}<br/> Age of employee : ${employeeAge} <br/> Gender of employee : ${employeeGender}<br/>Salary 
+    of employee : ${employeeSalary}`)
+    f3= ({ employeeId,employeeName,employeeAge,employeeSalary,employeeGender }) => 
+    document.write(` Id  of employee : ${employeeId} <br/>Name of employee : ${employeeName}<br/> Age of employee : ${employeeAge} <br/> Gender of employee : ${employeeGender}<br/>Salary 
+    of employee : ${employeeSalary}`)
+    f4= ({ employeeId,employeeName,employeeAge,employeeSalary,employeeGender }) => 
+    document.write(` Id  of employee : ${employeeId} <br/>Name of employee : ${employeeName}<br/> Age of employee : ${employeeAge} <br/> Gender of employee : ${employeeGender}<br/>Salary 
+    of employee : ${employeeSalary}`)
+*/
+f= ({ employeeId,employeeName,employeeAge,employeeSalary,employeeGender }) => document.write(`<div  style="float:left"><p>Id  of employee : ${employeeId} </p>
+    Name of employee : ${employeeName}<p> Age of employee : ${employeeAge} </p> <p>
+        Gender of employee : ${employeeGender}</p><p>Salary of employee : ${employeeSalary}</p></div>`);
+var arr=[emp1,emp2,emp3,emp4];
+var allProducts="";
+for(var i=0;i<arr.length;i++){
+ allProducts=allProducts+ `<p> ${f(arr[i])}</p>`;
+ }
+    f1(emp1);
+    f2(emp2);
+    f3(emp3);
+    f4(emp4);
+  
+ </script>
+
+
+</html>
