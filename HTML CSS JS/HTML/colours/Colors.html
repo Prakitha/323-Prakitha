@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        0<input type="range" name="b" value="50" />100 +
+        <input type="number" name="a" value="10" /> =
+        <output name="result"></output>
+    </form>
+    <form>
+            Select your houseColor
+    <input type="color" name="houseColor" value="#ff0000">
+    <br/>
+<label>SELECT your scheduledTime</label>
+    <input type="time"  format="hh:mm:ss" name="scheduledTime"
+     value="03:00:AM"><br/>
+    <label>Birthday Date(date)</label>
+    <input type="date" name="bdaytime" value="1999-03-08
+    min="1999-03-08" max="2025-08-03"><br/>
+    <label>SElect your date</label>
+    <input type="datetime-local" name="bdaytime"><br/>
+    <label>Select the week</label>
+    <input type="week" name=bdayWeekYear" value="2021-W03" min="2021-W03" 
+    max="2021-W04"><br/>
+    
+    <label>Quantity</label>
+    <input type="number"  pattern="[1-9]{1}[0-9]{9}"><br/>
+    <label>phone number</label>
+    <input type="tel" name="home telephone"   pattern="[1-9]{1}[0-9]{9}"><br/>
+    <label>rating (1 to 10)</label>
+    <input type="range" name="points" min="0" max="9" step="2"><br/>
+    <label>Google</label>
+    <input type="search" name="Google"><br/>
+    <label>homepage</label>
+    <input type="url" name="homepage" autofocus><br/>
+     <label>Enter emailID</label>
+<input type="email" name="prakitha1999@gmail.com" maxlength="10"><br/>
+
+<p>ScoreCard</p>
+<p>Physics<meter name="pra"value="15" min="0" max="100" low="20"</p><br/>
+<p>Maths<meter name="pre"value="85" min="0" max="100"</p><br>
+  <section >  <label>choose your browser </label>
+    <input list="browsers" name="browser" >
+      <datalist id="browsers">
+        <option value="internet explorer">
+        <option value="google">
+            <option value="opera">
+    </datalist>
+</section>
+    </form>
+    <form>
+<label>progressing</label>
+<progress></progress><br/>
+
+      <input type="button" name="submit"value="submit" /></input>
+
+      <p>defragmentation</p>
+      <progress max="100" value="80"/>
+        </form>
+        
+
+
+
+
+        <script>
+            alert(document.getElementById("pra").value);
+        </script>
+</html>
