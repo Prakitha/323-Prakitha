@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User</title>
+    <!-- Import the React, React-Dom and Babel libraries from unpkg -->
+    <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript"
+        src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <script type="text/babel">
+        class User extends React.Component {
+            render() {
+                const stye1 = { "color":"red" };
+                let  e=this.props.address;
+                let age=this.props.age;
+                return (
+                    <div>
+                    <h3 style={stye1}> I am {this.props.name} .</h3>
+                    <br/>My age is {age == undefined ? "18" : age}.
+                    <br/>My email id is {this.props.email}. 
+                    <br/>I am from {e == undefined ? "Hyderabad" : e}.
+                    <br/> My qualification is {this.props.study}.
+                    <br /> Intrests:<ul>{
+                            Array.from(this.props.intrest).map(
+                                item => (<li>{item}</li>)
+                            )
+                        }</ul>
+                        <hr/>
+                    </div>
+                )
+            }
+        }
+        var set1 = new Set();
+        set1.add("music");
+        set1.add("cooking");
+        
+
+        ReactDOM.render(<User name="Prakitha" age="21" intrest={set1} email="prakitha@gmail.com" address="hyderabad" study="B.tech"/> , document.getElementById("div1"))
+        ReactDOM.render(<User name="Samrudh" email="sam.reddy@gmail.com" intrest={set1} study="B.tech"/>, document.getElementById("div2"))
+
+    </script>
+
+</body>
+
+</html>

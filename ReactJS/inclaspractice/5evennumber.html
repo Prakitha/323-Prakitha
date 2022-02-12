@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script>
+     let range = {
+        from: 1,
+        to: 10
+    };
+const evenGenarator = function* () {
+    return {
+            current: this.from,
+            last: this.to,
+            next() {
+                // give only odd numbers
+                this.current = this.current + 1;
+                if (this.current <= this.last) {
+                    return { done: false, value: this.current++ };
+                } else {
+                    return { done: true };
+                }
+            }
+        };
+        //yeild new range(current);
+    };
+    
+
+</script>
+</html>

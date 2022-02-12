@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Local</title>
+    <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript"
+        src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<script>
+    class Apple {
+        static exportYear = 1999;
+        constructor(n, c, y) {
+            this.name = n;
+            this.color = c;
+            this.exportYear = y;
+        }
+        static f1 = () => {
+            alert("inside f1");
+        }
+    }
+    Apple.f1();
+    
+    let x = mat.Math(4, 26);
+    alert(x);
+
+    var apple1 = new Apple("kashmir", "red", 2000);
+    var apple2 = new Apple("shimla", "rose", 2001);
+    alert("1" + apple1.name);
+    alert("2" + apple2.name);
+    apple1.name = "Jammmu";
+    alert("11" + apple1.exportYear)
+    alert("1" + apple1.name);
+    alert("2" + apple2.name);
+    apple1.year = 2020
+    alert("1" + apple1.exportYear);
+    alert("2" + apple2.exportYear);
+    alert("2" + Apple.exportYear);
+
+
+</script>
+
+</html>

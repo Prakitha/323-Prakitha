@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Local</title>
+    <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript"
+        src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+
+    <script type="text/babel">
+        // Obtain the root 
+        //  const rootElement = document.getElementById('root')
+        // Create a ES6 class component    
+        /*class ShoppingList extends React.Component {
+            // Use the render function to return JSX component      
+            render() {
+                return (
+                    <div className="shopping-list">
+                        <h1>Shopping List for {this.props.name}</h1>
+                        <ul>
+                            <li>Instagram</li>
+                            <li>WhatsApp</li>
+                            <li>Oculus</li>
+                        </ul>
+                    </div>
+                );
+            }
+        }*/
+        // Use the ReactDOM.render to show your component on the browser
+        //ReactDOM.render(   <ShoppingList/>,  document.getElementById('root')   )
+        class Bird extends React.Component {
+            static defaultProps={
+                "colr":"blue",
+                "nationality":['Indian'],
+                "nest":{
+                    "where":"tree",
+                    "noOfRooms":1,
+                    "noOfOccupancy":2
+                }
+            }
+            render() {
+                var c = this.props.colr;
+                var b = this.props.nationality;
+                let primaryNat = this.props.nationality[0];
+                var color = (c == undefined) ? "black" : c;
+                var allDietAsList = "";
+                for (let it of this.props.diet) {
+                    allDietAsList = `${allDietAsList}<li>${it}</li>`
+                }
+                const colorStyle = { "color": `${color}`,"background": "lightgreen" }
+                const colorStyle1 = { "background": "yellow"  }
+                // object destructuring
+                const {colr,name,nationality,diet,nest}=this.props;
+                return (
+                    <div>
+                        <h3 style={colorStyle}>I am a  {name} bird.My color is {c == undefined ? "black"  : c}.</h3>
+                        My color is : <h3 style={colorStyle} > {color} </h3>
+                        <h3 style={colorStyle1}>My nationality is {b == undefined ? "Indian" : b}.My primary nationality is {primaryNat}</h3>
+                        Diet is: {Array.from(diet).join(" , ")}
+                        <br /> Diet as list:<ul>{
+                            Array.from(diet).map(
+                                item => (<li>{item}</li>)
+                            )
+                        }</ul>
+                        // this not display as html list because it is a string not converted
+                        <br/> 3.Diet :{allDietAsList}
+
+                        <h2 style={colorStyle1}>I live on {nest.where}. There are {nest.noOfRooms} rooms.They can stay {nest.noOfOccupancy} in each room.
+                            The total no of birds are {nest.noOfRooms*nest.noOfOccupancy}</h2>
+                            <hr/>
+                    </div>
+                )
+            }
+        }
+        var set1 = new Set();
+        set1.add("orange");
+        set1.add("carrot");
+        set1.add("banana")
+
+        //We can create objects and pass that as props to the component 
+
+        var birdNest1={
+            "where":"mountain",
+            "noOfRooms":4,
+            "noOfOccupancy":2,
+        }
+
+        ReactDOM.render(<Bird name="peacock" colr="green" nest={birdNest1} diet={set1} nationality={['Indian', 'American', 'Europian']} />, document.getElementById("div1"))
+        ReactDOM.render(<Bird name="monkey" diet={set1}/>, document.getElementById("div2"))
+
+        class Person extends React.Component {
+            render() {
+                var d = this.props.age;
+                var e = this.props.address;
+                return (
+                    <h3>I am {this.props.name} .My age is {d == undefined ? "18" : d}.My email id is {this.props.email}. I am from {e == undefined ? "Hyderabad" : e}</h3>)
+            }
+        }
+        ReactDOM.render(<Person name="Prakitha" age="21" email="prakitha@gmail.com" address="hyderabad"/>, document.getElementById("div3"))
+        ReactDOM.render(<Person name="Samrudh" email="sam.reddy@gmail.com" />, document.getElementById("div4"))
+
+    </script>
+
+</body>
+
+</html>

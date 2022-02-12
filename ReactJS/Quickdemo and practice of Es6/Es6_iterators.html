@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iterator and Generator</title>
+    <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript"
+        src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<script>
+    //Iterator opertator
+    /*let range = {
+        from: 1,
+        to: 10
+    };
+    range[Symbol.iterator] = function()  {        
+        return{
+            current: this.from,
+                last: this.to,
+                    next() {
+                if (this.current <= this.last) {
+                    return { done: false, value: this.current++ };
+                } else {
+                    return { done: true };
+                }
+                    }
+        };
+    };
+    for (let i of range){
+        //alert(i)
+    }*/
+    //Generator operator
+    class Apple {
+        constructor(n, c, y) {
+            this.name = n;
+            this.color = c;
+            this.year = y;
+        }
+    };
+    const aGeneratorObject = function* () {
+        yield new Apple("kashmir", "red", 2000);
+        yield new Apple("shimla", "blue", 2001);
+        yield new Apple("jammu", "yellow", 2020);
+    }();
+    document.write|("Generator object<br/>");
+    for(let i of aGeneratorObject)
+    document.write(i.name+"&nbsp;");
+    //for(let i of aGeneratorObject){
+    //   alert(i)
+    //alert(aGeneratorObject.next().value.name);
+    //alert(aGeneratorObject.next().value.name);
+    // alert(aGeneratorObject.next().value.name);
+    //alert(aGeneratorObject.next().value.color);
+    // alert(aGeneratorObject.next().value.color);
+    //alert(aGeneratorObject.next().value.year);
+
+    let range = {
+        from: 1,
+        to: 10
+    };
+    range[Symbol.iterator] = function () {
+        return {
+            current: this.from,
+            last: this.to,
+            next() {
+                // give only odd numbers
+                this.current = this.current + 2;
+                if (this.current <= this.last) {
+                    return { done: false, value: this.current++ };
+                } else {
+                    return { done: true };
+                }
+            }
+        };
+    };
+    for (let i1 of range) {
+        console.log(i1);
+    }
+</script>
+
+</html>
